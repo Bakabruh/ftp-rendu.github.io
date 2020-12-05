@@ -1,0 +1,110 @@
+.service {
+    width: 100%;
+
+    .offer {
+        padding-top: 50px;
+        margin-left: 200px;
+
+        .offer-over {
+            @include overTitle(25px, $lato);
+            text-transform: uppercase;
+        }
+
+        .offer-title {
+            @include title($title);
+        }
+    }
+
+    .section-container {
+        background-image: url('../../assets/img/background-service.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        article {
+            background-color: $white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            border-radius: 36px;
+            margin: 40px 30px;
+            width: 350px;
+            box-shadow: $boxShadow;
+
+            h3 {
+                font-family: $poppins;
+                font-weight: $semiBold;
+                font-size: 18px;
+                color: $black;
+                margin: 30px 0;
+                align-self: flex-start;
+                text-transform: uppercase;
+            }
+
+            p {
+                font-family: $lato;
+                font-weight: $regular;
+                font-size: 15px;
+                color: $black;
+                margin: 0 35px 0 0;
+            }
+
+            .button {
+                @include button(12px, 93px, $medium);
+                margin: 50px 30px 0 0;
+                align-self: flex-end;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+
+    .service {
+        margin-top: 150px;
+    }
+
+    .section-container {
+        background-image: url('../../assets/img/background-service.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: $breakpoint-mobile) {
+
+    .section {
+        width: 450px;
+
+        .offer {
+            margin: auto;
+
+            .offer-over {
+                @include overTitle(20px, $lato);
+                text-transform: uppercase;
+            }
+    
+            .offer-title {
+                @include title($subTitle);
+            }
+        }
+
+        .section-container {
+            background-image: url('../../assets/img/background-service.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+}

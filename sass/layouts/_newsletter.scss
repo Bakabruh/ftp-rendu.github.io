@@ -1,0 +1,88 @@
+.news {
+    width: 100%;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .news-over {
+        margin-top: 130px;
+        text-align: center;
+
+        p {
+            @include overTitle($overTitle, $poppins);
+        }
+
+        h2 {
+            font-family: $poppins;
+            font-size: 32px;
+            font-weight: $regular;
+            color: $black;
+
+            span {
+                font-weight: $semiBold;
+            }
+        }
+    }
+
+    .input {
+        display: flex;
+        margin : 30px 0 50px 0;
+
+        .mail {
+            width: 430px;
+            height: 52px;
+            background-color: $grey;
+            border: none;
+            margin: 0 15px;
+        }
+
+        .mail:placeholder-shown {
+            color: #999999;
+            padding-left: 30px;
+        }
+
+        .button {
+            @include button($text, 170px, $medium);
+            border: none;
+            text-transform: capitalize;
+            margin: 0 15px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+
+    .news {
+        width: 450px;
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            margin : 30px 0 50px 0;
+    
+            .mail {
+                width: 430px;
+                height: 70px;
+                background-color: $grey;
+                border: none;
+                margin: 0 15px;
+            }
+
+            .mail:placeholder-shown {
+                color: #999999;
+                padding-left: 30px;
+                font-size: $overTitle;
+            }
+
+            .button {
+                @include button($text, 170px, $medium);
+                border: none;
+                text-transform: capitalize;
+                margin: 50px 15px;
+                align-self: center;
+            }
+        }
+    }
+
+}
